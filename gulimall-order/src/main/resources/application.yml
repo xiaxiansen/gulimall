@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    #MySQL配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.85.130:3306/gulimall_oms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 9000
+ali:
+  pay:
+    merchant-private-key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCW7YU5P56NQbe6i4HzeFGRy4tzc44+vUm179G3Zm1RRTHQWQz8Vb8p3S+qArOWJKrs6S83NjAJQeutkNTugM4BaTrqOY/69+iAHKv2XzzC/hgWnBGaqdhrmq2gUyeIJIEN2RXfIBfeI40NPCJ/so7bzdt1MYSKAZZy3QQJwmMtvtXCM0XCFv8l8TTlHuklIABAMaFwtsPbG676ejodARviSfJGRX7omvj5EsS6SxzIuwLN5lJdE/V9SeIkgV8f84moFXD3QURd+lg03H5jZMSMYyREMiooPW6DFwk/mtZQc2ZXQOAT0R8UNWDyNs6Pmc4+EFGYUkJDxG93lWBgn7gbAgMBAAECggEAboxNT7B0rtya+a1jovTXMmYXn5ndb8Dv865UOvRwT93R7dy8MTuRSNW1Kt7NscTr2Zm3NsafCrjZKolyHbwEqG3udE9zUY0yJFxb7Jq3g8/fzvfDwTh0x+RFFrCxvPuX94+xgHweX1xE3ZPVZRlhoEg5Xa7GeNtO2pVedtOGF6OWILQXCi0AclLGytP9Lh9Nskx9+VMRly3KHEGnjsTXq7Bb3y6K4nVTinnot13xkHpTLtaS6p0azGXWFxqqabTedGCBX1T6LU71OrMVneOKykBoPLia5d65UJRvJufAgUPfkGrt/8yDuxtgom/s2Bu/LtBSier+dbR3H7WcF7PqOQKBgQDWURtkr6YJLSRy0gzNGutPcc34vngfTBOv8Cp1VU3K2HaCf9D8qbBGGKtuBz3Jf7cq76jGuXChbdgPgJn6knjQpANvPAmhWS7ei9wJ8BRkGPoIC2mQBBZO130pVwsktkJyAYItIT6Zk37VTLNLyqX8W8YeaEIMW7BCOOLWFa97FwKBgQC0SEHgwCnbosLoTbVPWRrf41d2AHKU0zYsU+9Wno8/RBgYk+l83r7kuwL4eBu0Fmvi9F5KmNE2F24ZB+TCx4nK/J7PWfEJK7r3e8P+M7TYy+DwrVvGC5dOxmwMstDbAfQRiBSZyxFtlhetQuzFpntZ5izGohytVzgMIv/ORrF9nQKBgFRbcHDdQnlyL1qSmz9QTTbkELLMJfQLueQSoGO2w/wH3/3V2ajaEexFYZTZfNSHVM2tr70o2NBxsA3KDNG4PZ3CMSfjddbwh6ZJXr76pMwRmLj55P8u3KkD4NwYyuYUZ2sAdQDWiRFiIRZMLnayuUrvxLfLSdQbcvFd+stRldTZAoGAC2vogIysGjYdkwoZSoWipjyI9fjhSXx4GibXKu2wtZlizWvRhw+1mFggwA0b9DTXcPF6Z892sa6aUwuk+pIZsLqAdTKFiscyeStmJ1yvQGzqO1VAUzO4ykzX25YYlUdyZwnwBC5RVFgF9/wddAgwGGn0vEDZAEJeUqaE/lSMOiECgYEAwSWNTPea8/TaqTw/tAIXM4ejw754R8piWQWBcAZHsSAzxIfzMb/zmIoFV9mJ2RtXsRG/LZjpqd97ZuD3IjpbGJmxQe5vJnDbpTrGA0qeMvWzzU3GwY7dGuAVhyUSCJxYJqhUC7zoXXNZ0Yf8Qt1Ga9+NlKyhnnLj6To2bL5qpWc=
+    app-id: 2016102700770854
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do
+    alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6ALcwSnNHwCMvCFsE/iHfkHn7fxfV7kubSWzXhiRTFC8RqxgNuamWLo8RoCGpQn5q4wYPxrl0wHdX4VpgWXZbwnYA30DVfXtrDiLr6xAK66zEiHIGesyw7CaD7EpKxNwHe8dK1Pf+hag3/v5lAr7T9YsiskSl9RXkiqERi8Jnc8VVrKEfo128TRHegr3+EEfFwcCACXmYHqLGmfvlED2DeY+tlctr5vOEs+KjuGjvqGnHN5tJ7yDnspeoetTsdd6ldHibKLuruH1b4yLchg/cGNmotiFLClF0Ds3pm6JTBf4kKvizVpXm2mfC8nWm73la4o6YC0HkpI8naaNScjYMQIDAQAB
+    notify-url: http://5m4ometvxl.54http.tech/payed/notify
+    return-url: http://member.gulimall.com/memberOrder.html
+    sign-type: RSA2
+    timeout: 1m

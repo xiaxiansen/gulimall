@@ -1,0 +1,29 @@
+package com.atguigu.gulimall.product.config;
+
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @program: gulimall -- com.atguigu.gulimall.product.config
+ * @description: TODO
+ * @author: xia liang
+ * @create: 2020-09-12 15:30
+ */
+@Configuration
+@MapperScan("com.atguigu.gulimall.product.dao")
+public class MybatisConfig {
+    
+    @Bean
+    public PaginationInterceptor paginationInterceptor() {
+        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+        // 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false
+         paginationInterceptor.setOverflow(false);
+        // 设置最大单页限制数量，默认 500 条，-1 不受限制
+         paginationInterceptor.setLimit(1000);
+        // 开启 count 的 join 优化,只针对部分 left join
+        return paginationInterceptor;
+    }
+}

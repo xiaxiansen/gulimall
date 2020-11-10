@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    alicloud:
+      sms:
+        host: https://smssend.shumaidata.com
+        path: /sms/send
+        app-code: ace01b246c304b81a9f8e558a7a9825c
+  application:
+    name: gulimall-third-party
+server:
+  port: 30001
+alibaba:
+  cloud:
+    access-key: LTAI4G4aoXhq8E9UcAZkuo1P
+    secret-key: oYkTFAK0otZM3ImdC3cMSsiyl9ur9c
+    oss:
+      endpoint: oss-cn-hangzhou.aliyuncs.com
+      bucket: gulimall-xia

@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        namespace: 818dea8c-8d07-4d9b-9d1e-c3c378e8827e
+        server-addr:  127.0.0.1:8848
+        extension-configs:
+          - data-id: oos.yml
+            group: DEFAULT_GROUP
+            refresh: true
+  application:
+    name: gulimall-third-party
