@@ -151,6 +151,7 @@ public class IndexController {
         RSemaphore park = redisson.getSemaphore("park");
         park.release();//释放一个车位
         System.out.println("是多久啊极大");
+        System.out.println("22222222222222");
         return "ok";
     }
 }
