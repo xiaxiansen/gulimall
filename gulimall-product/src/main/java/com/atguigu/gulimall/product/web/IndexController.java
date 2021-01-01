@@ -101,6 +101,7 @@ public class IndexController {
     @ResponseBody
     public String readValue(){
         System.out.println("read11");
+        System.out.println("read22");
         RReadWriteLock lock = redisson.getReadWriteLock("rw-lock");
         RLock rLock = lock.readLock();
         String s = "";
