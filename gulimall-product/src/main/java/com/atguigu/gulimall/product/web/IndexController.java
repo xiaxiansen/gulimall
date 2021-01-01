@@ -78,6 +78,7 @@ public class IndexController {
     @ResponseBody
     public String writeValue(){
         System.out.println("write1");
+        System.out.println("write2");
         RReadWriteLock lock = redisson.getReadWriteLock("rw-lock");
         RLock rLock = lock.writeLock();
         String s = "";
