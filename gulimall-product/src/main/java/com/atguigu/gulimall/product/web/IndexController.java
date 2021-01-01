@@ -146,6 +146,7 @@ public class IndexController {
     @GetMapping("/go")
     @ResponseBody
     public String go() throws InterruptedException {
+        System.out.println("11111111111111111");
         System.out.println("hello git");
         RSemaphore park = redisson.getSemaphore("park");
         park.release();//释放一个车位
