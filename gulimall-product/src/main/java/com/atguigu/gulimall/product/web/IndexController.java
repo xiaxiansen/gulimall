@@ -102,6 +102,7 @@ public class IndexController {
     public String readValue(){
         System.out.println("read11");
         System.out.println("read22");
+        System.out.println("read3");
         RReadWriteLock lock = redisson.getReadWriteLock("rw-lock");
         RLock rLock = lock.readLock();
         String s = "";
