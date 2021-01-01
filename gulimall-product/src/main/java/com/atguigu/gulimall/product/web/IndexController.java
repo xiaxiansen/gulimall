@@ -93,6 +93,7 @@ public class IndexController {
         }finally {
             rLock.unlock();
         }
+        System.out.println("write222");
         return s;
     }
     @GetMapping("/read")
