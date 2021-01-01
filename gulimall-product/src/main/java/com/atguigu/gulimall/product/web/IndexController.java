@@ -149,6 +149,7 @@ public class IndexController {
         System.out.println("hello git");
         RSemaphore park = redisson.getSemaphore("park");
         park.release();//释放一个车位
+        System.out.println("是多久啊极大");
         return "ok";
     }
 }
