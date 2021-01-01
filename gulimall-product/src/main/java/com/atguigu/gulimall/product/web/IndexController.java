@@ -77,6 +77,7 @@ public class IndexController {
     @GetMapping("/write")
     @ResponseBody
     public String writeValue(){
+        System.out.println("write1");
         RReadWriteLock lock = redisson.getReadWriteLock("rw-lock");
         RLock rLock = lock.writeLock();
         String s = "";
@@ -96,6 +97,7 @@ public class IndexController {
     @GetMapping("/read")
     @ResponseBody
     public String readValue(){
+        System.out.println("read11");
         RReadWriteLock lock = redisson.getReadWriteLock("rw-lock");
         RLock rLock = lock.readLock();
         String s = "";
