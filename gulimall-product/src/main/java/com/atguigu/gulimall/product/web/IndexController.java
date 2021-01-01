@@ -148,6 +148,7 @@ public class IndexController {
     public String go() throws InterruptedException {
         RSemaphore park = redisson.getSemaphore("park");
         park.release();//释放一个车位
+        System.out.println("是多久啊极大");
         return "ok";
     }
 }
