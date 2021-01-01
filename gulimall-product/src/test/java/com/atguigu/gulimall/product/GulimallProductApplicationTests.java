@@ -38,7 +38,8 @@ class GulimallProductApplicationTests {
 //        List<SpuItemAttrGroupVo> group = attrGroupDao.getAttrGroupWithAttrsBySpuId(40L, 225L);
 //        System.out.println(group);
         List<SkuItemSaleAttrVo> saleAttrsBySpuId = skuSaleAttrValueDao.getSaleAttrsBySpuId(40L);
-        System.out.println(saleAttrsBySpuId);
+        System.out.println(saleAttrsBySpuId+"=====================>>>>>>>");
+        System.out.println("--------------------------");
     }
     @Test
     public void redissonClient(){
